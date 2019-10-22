@@ -1,0 +1,44 @@
+--table
+--Table: user
+Create table user (
+    id int NOT NULL,
+    first_name varchar(255),
+    last_name varchar(255),
+    age tinyint(255),
+    weight_lb int,
+    height_in int,
+    Gender char,
+    Email varchar(255),
+    Password varchar(255)
+);
+--Table: trainer
+Create table trainer (
+    id int NOT NULL,
+    first_name varchar(255),
+    last_name varchar(255),
+    age tinyint(255),
+    weight_lb int,
+    height_in int,
+    Gender char,
+    service_price dec(10,2),
+    Email varchar(255),
+    Password varchar(255)
+);
+--Table: schedule
+Create table schedule (
+    "from" timestamp NOT NULL,
+    "to" timestamp NOT NULL
+)
+--Table: Appointment
+Create table appointment (
+    id int NOT NULL,
+    date_created timestamp NOT NULL,
+    Trainer_created int NOT NULL,
+    user_id int NULL,
+    trainer_id int NULL,
+    user_name varchar(128) NOT NULL,
+    use_contact varchar(128) NOT NULL,
+    start_time timestamp NOT NULL,
+    end_time_expected timestamp NOT NULL,
+    price decimal (10,2)
+)
