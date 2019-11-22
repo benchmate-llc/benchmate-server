@@ -1,7 +1,7 @@
 --table
 --Table: user
 Create table user (
-    id int NOT NULL,
+    id int NOT NULL AUTO_INCREMENT,
     first_name varchar(255),
     last_name varchar(255),
     age tinyint(255),
@@ -10,10 +10,11 @@ Create table user (
     Gender char,
     Email varchar(255),
     Password varchar(255)
+    PRIMARY KEY (id)
 );
 --Table: trainer
 Create table trainer (
-    id int NOT NULL,
+    id int NOT NULL AUTO_INCREMENT,
     first_name varchar(255),
     last_name varchar(255),
     age tinyint(255),
@@ -23,6 +24,7 @@ Create table trainer (
     service_price dec(10,2),
     Email varchar(255),
     Password varchar(255)
+    PRIMARY KEY (id)
 );
 --Table: schedule
 Create table schedule (
@@ -31,7 +33,7 @@ Create table schedule (
 )
 --Table: Appointment
 Create table appointment (
-    id int NOT NULL,
+    id int NOT NULL AUTO_INCREMENT,
     date_created timestamp NOT NULL,
     Trainer_created int NOT NULL,
     user_id int NULL,
@@ -41,4 +43,5 @@ Create table appointment (
     start_time timestamp NOT NULL,
     end_time_expected timestamp NOT NULL,
     price decimal (10,2)
+    PRIMARY KEY (id)
 )
